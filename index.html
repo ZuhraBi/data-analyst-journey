@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zuhra's Data Analyst Journey & Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for smooth scrolling and font application */
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Inter', sans-serif;
+        }
+        .project-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-sm shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo/Name -->
+                <a href="#home" class="text-xl font-extrabold text-teal-400 tracking-wider">
+                    ZUHRA | DATA JOURNEY
+                </a>
+                <!-- Navigation Links -->
+                <div class="flex space-x-4">
+                    <a href="#journey" class="text-gray-300 hover:text-teal-400 px-3 py-2 rounded-md text-sm font-medium transition duration-300">My Journey</a>
+                    <a href="#portfolio" class="text-gray-300 hover:text-teal-400 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Projects</a>
+                    <a href="#contact" class="text-gray-300 hover:text-teal-400 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="home" class="relative h-[60vh] flex items-center justify-center overflow-hidden border-b-4 border-teal-500/50">
+            <!-- Background pattern for data/tech feel -->
+            <div class="absolute inset-0 bg-repeat opacity-10" style="background-image: url('data:image/svg+xml;utf8,<svg viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'><circle cx=\'50\' cy=\'50\' r=\'2\' fill=\'%23374151\'/></svg>');"></div>
+            
+            <div class="relative z-10 text-center p-6 bg-gray-900/70 rounded-xl max-w-xl mx-4">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tighter text-teal-300">Aspiring Data Analyst: Zuhra</h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-6">Building foundational skills in **Excel**, **Power BI**, and **R** to drive measurable insights.</p>
+                <a href="#journey" class="inline-block px-6 py-3 text-base font-medium rounded-full text-gray-900 bg-teal-400 hover:bg-teal-300 transition duration-300 shadow-xl transform hover:scale-105">
+                    View My Learning Log
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Learning Journey Section (The Blog/Log) -->
+        <section id="journey" class="py-16 md:py-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-center mb-12 text-teal-400">My Learning Log</h2>
+            
+            <div class="space-y-8">
+                
+                <!-- NEW Entry 1: Current Focus on R -->
+                <div class="p-6 bg-gray-800 rounded-xl border-l-4 border-teal-500 shadow-lg">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="text-xl font-semibold text-white">Current Focus: Data Wrangling with R's dplyr</h3>
+                        <span class="text-sm text-gray-400">Week 5 / 2025-10-06</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        I'm currently mastering the **'pipe' operator (`%>%`)** and core verbs in R like `filter()`, `mutate()`, and `group_by()` to efficiently clean and structure data. This is laying the groundwork for more advanced statistical projects.
+                    </p>
+                    <a href="#" class="text-teal-400 hover:text-teal-300 text-sm font-medium">
+                        [Link to related R code snippet or GitHub notebook]
+                    </a>
+                </div>
+
+                <!-- NEW Entry 2: Power BI Milestone -->
+                <div class="p-6 bg-gray-800 rounded-xl border-l-4 border-gray-500 shadow-lg">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="text-xl font-semibold text-white">Milestone: First Interactive Power BI Dashboard</h3>
+                        <span class="text-sm text-gray-400">Week 3 / 2025-09-29</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Successfully connected sales data to Power BI, built relationships, and created a dynamic dashboard using **DAX calculated columns**. The challenge was ensuring filter context worked across visuals, but the final result is easy to interpret.
+                    </p>
+                    <a href="#portfolio" class="text-teal-400 hover:text-teal-300 text-sm font-medium">
+                        See Dashboard Project in Portfolio ↓
+                    </a>
+                </div>
+
+                <!-- NEW Entry 3: Excel Foundation -->
+                <div class="p-6 bg-gray-800 rounded-xl border-l-4 border-gray-500 shadow-lg">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="text-xl font-semibold text-white">Foundation: Advanced Excel for Data Prep</h3>
+                        <span class="text-sm text-gray-400">Week 1 / 2025-09-15</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Solidifying skills in **Pivot Tables**, **VLOOKUP/XLOOKUP**, and conditional formatting. These remain critical for quick data review before moving into advanced tools.
+                    </p>
+                    <span class="text-gray-500 text-sm">Focusing on practical exercises.</span>
+                </div>
+                
+            </div>
+            
+            <!-- Call to action to update the log -->
+            <p class="text-center text-gray-500 mt-12 text-sm">
+                *Remember to add new entries to the top of this list in your index.html file to keep your log chronological!*
+            </p>
+
+        </section>
+
+        <!-- 3. Portfolio/Projects Grid Section (Start Empty) -->
+        <section id="portfolio" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-gray-800">
+            <h2 class="text-4xl font-extrabold text-center mb-12 text-white">Data Projects (Building Now)</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+
+                <!-- Placeholder 1: Where a project goes once complete -->
+                <div class="project-card transition duration-300 rounded-xl shadow-xl border border-gray-700 bg-gray-700 p-6 text-center">
+                    <h3 class="text-2xl font-semibold mb-2 text-teal-300">Project 1: Sales Data Analysis</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Tools: Excel & Power BI | Status: In Development</p>
+                    <p class="text-gray-300">Once complete, this card will link directly to a live Power BI report or a write-up of my methodology.</p>
+                    <a href="#" class="mt-4 inline-block text-teal-400 hover:text-teal-300 text-sm font-medium">
+                        Link to Live Project / Github
+                    </a>
+                </div>
+
+                <!-- Placeholder 2 -->
+                <div class="project-card transition duration-300 rounded-xl shadow-xl border border-gray-700 bg-gray-700 p-6 text-center">
+                    <h3 class="text-2xl font-semibold mb-2 text-teal-300">Project 2: R Data Cleaning Challenge</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Tools: R (dplyr) | Status: Learning Phase</p>
+                    <p class="text-gray-300">This spot is reserved for my first R-based project, likely focused on data preparation and basic visualization using `ggplot2`.</p>
+                    <a href="#" class="mt-4 inline-block text-teal-400 hover:text-teal-300 text-sm font-medium">
+                        Link to Project Repository
+                    </a>
+                </div>
+                
+                <!-- Placeholder 3 -->
+                <div class="project-card transition duration-300 rounded-xl shadow-xl border border-gray-700 bg-gray-700 p-6 text-center">
+                    <h3 class="text-2xl font-semibold mb-2 text-teal-300">Project 3: Idea Generation</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Status: Planning Marketing/Social Media Analysis</p>
+                    <p class="text-gray-300">This will be a deeper analysis, perhaps involving web scraping or advanced time series forecasting, using both R and visualization tools.</p>
+                    <a href="#" class="mt-4 inline-block text-teal-400 hover:text-teal-300 text-sm font-medium">
+                        Coming Soon...
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. Contact Section -->
+        <section id="contact" class="py-16 md:py-24 max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-extrabold mb-4 text-gray-100">Let's Connect</h2>
+            <p class="text-lg text-gray-400 mb-8">
+                I'm actively learning and open to feedback and collaboration on any data projects.
+            </p>
+            <a href="mailto:your_email@example.com" class="inline-block px-10 py-4 text-lg font-semibold rounded-lg text-gray-900 bg-teal-400 hover:bg-teal-300 transition duration-300 shadow-lg transform hover:shadow-xl">
+                Send an Email
+            </a>
+            <p class="text-sm text-gray-500 mt-6">
+                (your_email@example.com)
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm text-gray-500">&copy; 2025 Zuhra's Data Analyst Journey. Built with determination and Tailwind CSS.</p>
+        </div>
+    </footer>
+</body>
+</html>
