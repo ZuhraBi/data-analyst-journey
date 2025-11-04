@@ -27,12 +27,13 @@
   <!-- NAV -->
   <header class="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-sm shadow-lg">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="#home" class="text-xl font-extrabold text-teal-400 tracking-wider">
+      <div class="flex flex-col sm:flex-row items-center justify-between h-auto py-4 gap-4">
+        
+        <a href="#home" class="text-xl font-extrabold text-teal-400 tracking-wider text-center sm:text-left">
           ZUHRA | DATA ANALYST
         </a>
 
-        <div class="flex space-x-4">
+        <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0 text-center">
           <a href="#journey" class="text-gray-300 hover:text-teal-400 px-3 py-2 text-sm">My Journey</a>
           <a href="#portfolio" class="text-gray-300 hover:text-teal-400 px-3 py-2 text-sm">Projects</a>
           <a href="#contact" class="text-gray-300 hover:text-teal-400 px-3 py-2 text-sm">Contact</a>
@@ -56,39 +57,39 @@
           Building skills in Excel, Power BI, Python, R, and Tableau.
         </p>
         <a href="#journey" class="inline-block px-6 py-3 rounded-full bg-teal-400 text-gray-900 hover:bg-teal-300 transition">
-          View Learning Log
+          View Project Documentation
         </a>
       </div>
     </section>
 
     <!-- PROJECT DOCUMENTATION -->
-<section id="project-docs" class="py-16 max-w-4xl mx-auto px-4">
-  <h2 class="text-4xl font-bold text-center mb-12 text-teal-400">Project Documentation</h2>
+    <section id="journey" class="py-16 max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 text-teal-400">Project Documentation</h2>
 
-  <h3 class="text-2xl font-semibold text-teal-300 mb-4">Excel Projects</h3>
+      <h3 class="text-2xl font-semibold text-teal-300 mb-4">Excel Projects</h3>
 
-  <div class="p-6 bg-gray-800 rounded-xl border-l-4 border-teal-500 shadow-lg mb-6">
-    <h4 class="text-xl font-semibold mb-2 text-white">Advanced Excel — Sales Analysis</h4>
-    <p class="text-gray-300 mb-3">
-      Performed pivot analysis, lookup functions, and formatting to highlight product + region performance.
-    </p>
-    <a class="inline-block px-4 py-2 bg-teal-400 text-gray-900 rounded-lg font-medium hover:bg-teal-300 transition" 
-       href="#" target="_blank">Download PDF</a>
-  </div>
+      <div class="p-6 bg-gray-800 rounded-xl border-l-4 border-teal-500 shadow-lg mb-6">
+        <h4 class="text-xl font-semibold mb-2 text-white">Advanced Excel — Sales Analysis</h4>
+        <p class="text-gray-300 mb-3">
+          Performed pivot analysis, lookup functions, and formatting to highlight product + regional performance.
+        </p>
+        <a class="inline-block px-4 py-2 bg-teal-400 text-gray-900 rounded-lg font-medium hover:bg-teal-300 transition" 
+        href="#" target="_blank">Download PDF</a>
+      </div>
 
 
-  <h3 class="text-2xl font-semibold text-teal-300 mt-10 mb-4">Power BI Projects</h3>
+      <h3 class="text-2xl font-semibold text-teal-300 mt-10 mb-4">Power BI Projects</h3>
 
-  <div class="p-6 bg-gray-800 rounded-xl border-l-4 border-gray-500 shadow-lg mb-6">
-    <h4 class="text-xl font-semibold mb-2 text-white">Interactive Sales Dashboard</h4>
-    <p class="text-gray-300 mb-3">
-      Built interactive BI dashboard with DAX measures, dynamic filters, and trend visuals.
-    </p>
-    <a class="inline-block px-4 py-2 bg-teal-400 text-gray-900 rounded-lg font-medium hover:bg-teal-300 transition"
-       href="#" target="_blank">Download PDF</a>
-  </div>
+      <div class="p-6 bg-gray-800 rounded-xl border-l-4 border-gray-500 shadow-lg mb-6">
+        <h4 class="text-xl font-semibold mb-2 text-white">Interactive Sales Dashboard</h4>
+        <p class="text-gray-300 mb-3">
+          Built an interactive BI dashboard with DAX measures, dynamic filters, and trend visuals.
+        </p>
+        <a class="inline-block px-4 py-2 bg-teal-400 text-gray-900 rounded-lg font-medium hover:bg-teal-300 transition"
+        href="#" target="_blank">Download PDF</a>
+      </div>
 
-</section>
+    </section>
 
 
     <!-- PROJECT SIDEBAR + GRID -->
@@ -116,7 +117,7 @@
           <button class="filterBtn bg-gray-700 w-full py-2 rounded" data-filter="tableau">Tableau</button>
         </div>
 
-        <!-- RESUME BUTTON PLACEHOLDER -->
+        <!-- RESUME BUTTON -->
         <a
           href="#"
           class="block text-center mt-8 bg-teal-400 text-gray-900 py-2 rounded hover:bg-teal-300"
@@ -127,9 +128,9 @@
       </aside>
 
       <!-- PROJECT GRID -->
-      <div class="col-span-12 lg:col-span-9 grid sm:grid-cols-2 xl:grid-cols-3 gap-6" id="projectContainer">
+      <div class="col-span-12 lg:col-span-9 grid grid-cols-2 lg:grid-cols-3 gap-6" id="projectContainer">
 
-        <!-- EXCEL PROJECT EXAMPLE -->
+        <!-- EXCEL PROJECT -->
         <div class="project-card bg-gray-800 rounded-xl p-4 border border-gray-700 filter-excel" data-title="grading system">
           <img src="https://raw.githubusercontent.com/ZuhraBi/data-analyst-journey/main/Grading%20system%20Sample.png" />
           <h3 class="text-xl font-semibold text-teal-300">Excel: Grading System</h3>
@@ -138,23 +139,19 @@
             download
             href="https://raw.githubusercontent.com/ZuhraBi/data-analyst-journey/main/Grading%20System.xlsx"
             class="inline-block mt-3 bg-yellow-400 text-gray-900 py-2 px-4 rounded text-sm"
-          >
-            Download
-          </a>
+          >Download</a>
         </div>
 
+        <!-- EXCEL PROJECT -->
         <div class="project-card bg-gray-800 rounded-xl p-4 border border-gray-700 filter-excel" data-title="accounting cycle">
-          <img src="https://raw.githubusercontent.com/ZuhraBi/data-analyst-journey/main/Accounting%20Process.png
-" />
+          <img src="https://raw.githubusercontent.com/ZuhraBi/data-analyst-journey/main/Accounting%20Process.png" />
           <h3 class="text-xl font-semibold text-teal-300">Excel: Accounting Cycle</h3>
           <p class="text-gray-400 text-sm">Full journal to statements workflow.</p>
           <a 
             download
             href="https://raw.githubusercontent.com/ZuhraBi/data-analyst-journey/main/Sample%20Accounting%20Project.xlsx"
             class="inline-block mt-3 bg-yellow-400 text-gray-900 py-2 px-4 rounded text-sm"
-          >
-            Download
-          </a>
+          >Download</a>
         </div>
 
       </div>
