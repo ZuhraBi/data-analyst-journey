@@ -2,242 +2,221 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zuhra | Data Analyst Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zuhra • Data Analyst Portfolio</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      background: #f4f4f4;
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Inter', sans-serif;
     }
 
-    /* Sidebar */
-    .sidebar {
-      width: 260px;
-      background: #0f172a;
-      color: white;
-      padding: 25px;
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      left: 0;
+    .project-card:hover {
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,.5);
+      transform: translateY(-4px);
     }
-
-    .sidebar h2 {
-      margin-top: 0;
-    }
-
-    .sidebar a {
-      color: #ffffff;
-      text-decoration: none;
-      display: block;
-      margin: 12px 0;
-      font-size: 15px;
-    }
-
-    .resume-btn {
-      margin-top: 20px;
-      background: #1e40af;
-      padding: 10px;
-      text-align: center;
-      border-radius: 6px;
-    }
-
-    .container {
-      margin-left: 280px;
-      padding: 25px;
-      width: calc(100% - 280px);
-    }
-
-    /* Filters + Search */
-    .controls {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 18px;
-      flex-wrap: wrap;
-    }
-
-    .controls button {
-      padding: 8px 12px;
-      background: #1e293b;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-
-    .controls button:hover {
-      background: #475569;
-    }
-
-    #searchBar {
-      padding: 8px;
-      width: 220px;
-      border: 1px solid #aaa;
-      border-radius: 4px;
-    }
-
-    /* Project Grid */
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-      gap: 18px;
-    }
-
-    .project-card {
-      background: #fff;
-      border-radius: 8px;
-      padding: 12px;
-      box-shadow: 0px 0px 5px rgba(0,0,0,0.15);
-    }
-
-    .project-card img {
-      width: 100%;
-      height: 150px;
-      border-radius: 6px;
-      object-fit: cover;
-      background: #ddd;
-    }
-
-    .project-card h3 {
-      margin: 10px 0 6px;
-      font-size: 18px;
-    }
-
-    .project-card p {
-      font-size: 14px;
-      color: #444;
-      margin-bottom: 10px;
-    }
-
-    .project-card a {
-      display: inline-block;
-      padding: 8px 12px;
-      font-size: 14px;
-      border-radius: 4px;
-      background: #1e40af;
-      color: white;
-      text-decoration: none;
-    }
-
-    .project-card a:hover {
-      background: #475569;
-    }
-
   </style>
 </head>
-<body>
 
-  <!-- SIDEBAR -->
-  <div class="sidebar">
-    <h2>Zuhra</h2>
-    <p>Data Analyst</p>
+<body class="bg-gray-900 text-white min-h-screen">
 
-    <a href="#">Home</a>
-    <a href="#">Projects</a>
-    <a href="#">Contact</a>
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-sm shadow-lg">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="text-xl font-extrabold text-teal-400 tracking-wider">
+          ZUHRA | DATA ANALYST
+        </a>
 
-    <a href="YOUR_RESUME_LINK.pdf" class="resume-btn" target="_blank">
-      Download Resume
-    </a>
-  </div>
+        <div class="flex space-x-4">
+          <a href="#journey" class="text-gray-300 hover:text-teal-400 px-3 py-2 text-sm">My Journey</a>
+          <a href="#portfolio" class="text-gray-300 hover:text-teal-400 px-3 py-2 text-sm">Projects</a>
+          <a href="#contact" class="text-gray-300 hover:text-teal-400 px-3 py-2 text-sm">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
 
   <!-- MAIN -->
-  <div class="container">
-    <h1>Portfolio</h1>
+  <main>
 
-    <!-- FILTERS + SEARCH -->
-    <div class="controls">
-      <button onclick="filterProjects('all')">All</button>
-      <button onclick="filterProjects('excel')">Excel</button>
-      <button onclick="filterProjects('powerbi')">Power BI</button>
-      <button onclick="filterProjects('python')">Python</button>
-      <button onclick="filterProjects('rstudio')">R</button>
-      <button onclick="filterProjects('tableau')">Tableau</button>
+    <!-- HERO -->
+    <section id="home" class="relative h-[60vh] flex items-center justify-center border-b-4 border-teal-500/50">
+      <div class="absolute inset-0 bg-repeat opacity-10" style="background-image:url('data:image/svg+xml;utf8,<svg viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'><circle cx=\'50\' cy=\'50\' r=\'2\' fill=\'%23374151\'/></svg>');"></div>
 
-      <input type="text" id="searchBar" placeholder="Search..." onkeyup="searchProjects()" />
-    </div>
-
-    <!-- PROJECT LIST -->
-    <div class="projects" id="projectList">
-
-      <!-- Excel Project -->
-      <div class="project-card" data-category="excel">
-        <img src="images/excel1.jpg" alt="Excel Project">
-        <h3>Sales Analysis Dashboard (Excel)</h3>
-        <p>Sales summary with pivot charts showing trends.</p>
-        <a href="GITHUB_PDF_LINK" target="_blank">View PDF</a>
+      <div class="relative z-10 text-center p-6 bg-gray-900/70 rounded-xl max-w-xl mx-4">
+        <h1 class="text-5xl font-bold mb-4 text-teal-300 tracking-tight">
+          Aspiring Data Analyst
+        </h1>
+        <p class="text-gray-300 text-xl mb-6">
+          Building skills in Excel, Power BI, Python, R, and Tableau.
+        </p>
+        <a href="#journey" class="inline-block px-6 py-3 rounded-full bg-teal-400 text-gray-900 hover:bg-teal-300 transition">
+          View Learning Log
+        </a>
       </div>
+    </section>
 
-      <!-- Add more EXCEL projects -->
-      <div class="project-card" data-category="excel">
-        <img src="images/excel2.jpg" alt="Excel Project">
-        <h3>Employee Performance</h3>
-        <p>Team performance metrics with slicers.</p>
-        <a href="GITHUB_PDF_LINK" target="_blank">View PDF</a>
+    <!-- JOURNEY -->
+    <section id="journey" class="py-16 max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 text-teal-400">My Learning Log</h2>
+
+      <div class="space-y-8">
+
+        <div class="p-6 bg-gray-800 rounded-xl border-l-4 border-teal-500 shadow-lg">
+          <div class="flex justify-between mb-3">
+            <h3 class="text-xl font-semibold">Current Focus: Data Wrangling with R</h3>
+            <span class="text-gray-400 text-sm">Week 5 / 2025-10-06</span>
+          </div>
+          <p class="text-gray-300">
+            Learning filter, mutate, and group_by to prepare cleaner datasets.
+          </p>
+        </div>
+
+        <div class="p-6 bg-gray-800 rounded-xl border-l-4 border-gray-500 shadow-lg">
+          <div class="flex justify-between mb-3">
+            <h3 class="text-xl font-semibold">Milestone: First Power BI Dashboard</h3>
+            <span class="text-gray-400 text-sm">Week 3 / 2025-09-29</span>
+          </div>
+          <p class="text-gray-300">
+            Connected sales data and used DAX to build an interactive report.
+          </p>
+        </div>
+
+        <div class="p-6 bg-gray-800 rounded-xl border-l-4 border-gray-500 shadow-lg">
+          <div class="flex justify-between mb-3">
+            <h3 class="text-xl font-semibold">Foundation: Advanced Excel</h3>
+            <span class="text-gray-400 text-sm">Week 1 / 2025-09-15</span>
+          </div>
+          <p class="text-gray-300">
+            Practice in Lookup functions, Pivot Tables, and formatting.
+          </p>
+        </div>
+
       </div>
+    </section>
 
-      <!-- Power BI -->
-      <div class="project-card" data-category="powerbi">
-        <img src="images/pb1.jpg" alt="Power BI">
-        <h3>Marketing Performance</h3>
-        <p>Insights into campaign ROI.</p>
-        <a href="GITHUB_PDF_LINK" target="_blank">View PDF</a>
+    <!-- PROJECT SIDEBAR + GRID -->
+    <section id="portfolio" class="py-16 max-w-7xl mx-auto px-4 grid grid-cols-12 gap-6">
+      
+      <!-- LEFT SIDEBAR -->
+      <aside class="col-span-12 lg:col-span-3 space-y-4 bg-gray-800 p-6 rounded-xl h-fit sticky top-24">
+        
+        <h3 class="text-xl font-semibold mb-4">Filters</h3>
+
+        <!-- SEARCH -->
+        <input 
+          id="searchInput"
+          placeholder="Search projects..."
+          class="w-full px-3 py-2 rounded bg-gray-700 border border-gray-600 text-sm"
+        />
+
+        <!-- CATEGORY FILTERS -->
+        <div class="space-y-2 mt-4">
+          <button class="filterBtn bg-gray-700 w-full py-2 rounded" data-filter="all">All</button>
+          <button class="filterBtn bg-gray-700 w-full py-2 rounded" data-filter="excel">Excel</button>
+          <button class="filterBtn bg-gray-700 w-full py-2 rounded" data-filter="powerbi">Power BI</button>
+          <button class="filterBtn bg-gray-700 w-full py-2 rounded" data-filter="python">Python</button>
+          <button class="filterBtn bg-gray-700 w-full py-2 rounded" data-filter="r">R</button>
+          <button class="filterBtn bg-gray-700 w-full py-2 rounded" data-filter="tableau">Tableau</button>
+        </div>
+
+        <!-- RESUME BUTTON PLACEHOLDER -->
+        <a
+          href="#"
+          class="block text-center mt-8 bg-teal-400 text-gray-900 py-2 rounded hover:bg-teal-300"
+        >
+          Download Resume
+        </a>
+
+      </aside>
+
+      <!-- PROJECT GRID -->
+      <div class="col-span-12 lg:col-span-9 grid sm:grid-cols-2 xl:grid-cols-3 gap-6" id="projectContainer">
+
+        <!-- EXCEL PROJECT EXAMPLE -->
+        <div class="project-card bg-gray-800 rounded-xl p-4 border border-gray-700 filter-excel" data-title="grading system">
+          <img src="https://placehold.co/400x250?text=Excel+Project" class="rounded mb-3" />
+          <h3 class="text-xl font-semibold text-teal-300">Excel: Grading System</h3>
+          <p class="text-gray-400 text-sm">Excel basics with grade logic.</p>
+          <a 
+            download
+            href="https://raw.githubusercontent.com/ZuhraBi/data-analyst-journey/main/Grading%20System.xlsx"
+            class="inline-block mt-3 bg-yellow-400 text-gray-900 py-2 px-4 rounded text-sm"
+          >
+            Download
+          </a>
+        </div>
+
+        <div class="project-card bg-gray-800 rounded-xl p-4 border border-gray-700 filter-excel" data-title="accounting cycle">
+          <img src="https://placehold.co/400x250?text=Excel+Project" class="rounded mb-3" />
+          <h3 class="text-xl font-semibold text-teal-300">Excel: Accounting Cycle</h3>
+          <p class="text-gray-400 text-sm">Full journal to statements workflow.</p>
+          <a 
+            download
+            href="https://raw.githubusercontent.com/ZuhraBi/data-analyst-journey/main/Sample%20Accounting%20Project.xlsx"
+            class="inline-block mt-3 bg-yellow-400 text-gray-900 py-2 px-4 rounded text-sm"
+          >
+            Download
+          </a>
+        </div>
+
       </div>
+    </section>
 
-      <!-- Python -->
-      <div class="project-card" data-category="python">
-        <img src="images/python1.jpg" alt="Python">
-        <h3>Python EDA</h3>
-        <p>Exploratory data analysis using Pandas.</p>
-        <a href="GITHUB_PDF_LINK" target="_blank">View PDF</a>
-      </div>
+    <!-- CONTACT -->
+    <section id="contact" class="py-16 text-center max-w-xl mx-auto">
+      <h2 class="text-4xl font-bold mb-4">Let's Connect</h2>
+      <p class="text-gray-400 mb-8">
+        I'm learning every day and open to collaboration.
+      </p>
+      <a href="mailto:your_email@example.com" class="px-10 py-4 bg-teal-400 text-gray-900 rounded hover:bg-teal-300">
+        Send Email
+      </a>
 
-      <!-- R -->
-      <div class="project-card" data-category="rstudio">
-        <img src="images/r1.jpg" alt="R Studio Project">
-        <h3>R: Iris Visualization</h3>
-        <p>Scatter plot, boxplot, and summary.</p>
-        <a href="GITHUB_PDF_LINK" target="_blank">View PDF</a>
-      </div>
+      <p class="text-gray-500 text-sm mt-6">
+        (your_email@example.com)
+      </p>
+    </section>
 
-      <!-- Tableau -->
-      <div class="project-card" data-category="tableau">
-        <img src="images/tableau1.jpg" alt="Tableau">
-        <h3>Retail Trends</h3>
-        <p>Tableau dashboards explaining revenue insights.</p>
-        <a href="GITHUB_PDF_LINK" target="_blank">View PDF</a>
-      </div>
+  </main>
 
-    </div>
-  </div>
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 border-t border-gray-800 py-8 text-center">
+    <p class="text-sm text-gray-500">
+      © 2025 Zuhra’s Data Analyst Journey
+    </p>
+  </footer>
 
-  <!-- JS -->
+  <!-- JS FILTER / SEARCH -->
   <script>
-    function filterProjects(category) {
-      const cards = document.querySelectorAll(".project-card");
+    const filterBtns = document.querySelectorAll(".filterBtn");
+    const projects = document.querySelectorAll(".project-card");
+    const searchInput = document.getElementById("searchInput");
 
-      cards.forEach(card => {
-        if (category === "all" || card.dataset.category === category) {
-          card.style.display = "block";
-        } else {
-          card.style.display = "none";
-        }
+    filterBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const filter = btn.dataset.filter;
+        projects.forEach(card => {
+          if (filter === "all" || card.classList.contains("filter-" + filter)) {
+            card.style.display = "";
+          } else {
+            card.style.display = "none";
+          }
+        });
       });
-    }
+    });
 
-    function searchProjects() {
-      const term = document.getElementById("searchBar").value.toLowerCase();
-      const cards = document.querySelectorAll(".project-card");
-
-      cards.forEach(card => {
-        const text = card.innerText.toLowerCase();
-        card.style.display = text.includes(term) ? "block" : "none";
+    searchInput.addEventListener("input", () => {
+      const value = searchInput.value.toLowerCase();
+      projects.forEach(card => {
+        card.style.display = card.dataset.title.includes(value) ? "" : "none";
       });
-    }
+    });
   </script>
 
 </body>
