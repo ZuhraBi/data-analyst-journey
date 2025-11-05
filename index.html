@@ -127,35 +127,56 @@
 
       </aside>
 
-      <!-- PROJECT GRID -->
-      <div class="col-span-12 lg:col-span-9 grid grid-cols-2 lg:grid-cols-3 gap-6" id="projectContainer">
+    <!-- PROJECTS -->
+<section id="projects" class="py-16 max-w-6xl mx-auto px-4">
 
-        <!-- EXCEL PROJECT -->
-        <div class="project-card bg-gray-800 rounded-xl p-4 border border-gray-700 filter-excel" data-title="grading system">
-          <img src="https://raw.githubusercontent.com/ZuhraBi/data-analyst-journey/main/Grading%20system%20Sample.png" />
-          <h3 class="text-xl font-semibold text-teal-300">Excel: Grading System</h3>
-          <p class="text-gray-400 text-sm">Excel basics with grade logic.</p>
-          <a 
-            download
-            href="https://raw.githubusercontent.com/ZuhraBi/data-analyst-journey/main/Grading%20System.xlsx"
-            class="inline-block mt-3 bg-yellow-400 text-gray-900 py-2 px-4 rounded text-sm"
-          >Download</a>
-        </div>
+  <!-- Heading -->
+  <h2 class="text-4xl font-bold text-center mb-4 text-teal-400">
+    Projects
+  </h2>
 
-        <!-- EXCEL PROJECT -->
-        <div class="project-card bg-gray-800 rounded-xl p-4 border border-gray-700 filter-excel" data-title="accounting cycle">
-          <img src="https://raw.githubusercontent.com/ZuhraBi/data-analyst-journey/main/Accounting%20Process.png" />
-          <h3 class="text-xl font-semibold text-teal-300">Excel: Accounting Cycle</h3>
-          <p class="text-gray-400 text-sm">Full journal to statements workflow.</p>
-          <a 
-            download
-            href="https://raw.githubusercontent.com/ZuhraBi/data-analyst-journey/main/Sample%20Accounting%20Project.xlsx"
-            class="inline-block mt-3 bg-yellow-400 text-gray-900 py-2 px-4 rounded text-sm"
-          >Download</a>
-        </div>
+  <!-- FILTERS -->
+  <div class="flex flex-wrap justify-center gap-3 mb-10">
+    <button class="px-4 py-2 rounded bg-gray-700 text-white filter-btn" data-filter="all">
+      All
+    </button>
+    <button class="px-4 py-2 rounded bg-gray-700 text-white filter-btn" data-filter="excel">
+      Excel
+    </button>
+    <button class="px-4 py-2 rounded bg-gray-700 text-white filter-btn" data-filter="powerbi">
+      Power BI
+    </button>
+    <button class="px-4 py-2 rounded bg-gray-700 text-white filter-btn" data-filter="tableau" disabled>
+      Tableau (coming soon)
+    </button>
+    <button class="px-4 py-2 rounded bg-gray-700 text-white filter-btn" data-filter="r" disabled>
+      R (coming soon)
+    </button>
+  </div>
 
-      </div>
-    </section>
+  <!-- PROJECT GRID -->
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="projectContainer">
+
+    <!-- EXCEL PROJECT EXAMPLE -->
+    <div class="project-card bg-gray-800 rounded-xl p-4 border border-gray-700 filter-excel" data-title="grading system">
+      <img
+        class="rounded mb-3"
+        src="https://raw.githubusercontent.com/ZuhraBi/data-analyst-journey/main/Grading%20system%20Sample.png"
+      />
+      <h3 class="text-xl font-semibold text-teal-300">Excel: Grading System</h3>
+      <p class="text-gray-400 text-sm">Excel basics with grade logic.</p>
+      <a
+        download
+        href="https://raw.githubusercontent.com/ZuhraBi/data-analyst-journey/main/Grading%20System.xlsx"
+        class="inline-block mt-3 bg-yellow-400 text-gray-900 py-2 px-4 rounded text-sm"
+      >
+        Download
+      </a>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- CONTACT -->
     <section id="contact" class="py-16 text-center max-w-xl mx-auto">
