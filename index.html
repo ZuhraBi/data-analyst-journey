@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zuhra • Data Analyst Portfolio</title>
 
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
@@ -23,18 +22,15 @@
 </head>
 
 <body class="bg-gray-900 text-white min-h-screen">
-
-  <!-- NAV -->
   <header class="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-sm shadow-lg">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col sm:flex-row items-center justify-between h-auto py-4 gap-4">
-        
         <a href="#home" class="text-xl font-extrabold text-teal-400 tracking-wider text-center sm:text-left">
           ZUHRA | DATA ANALYST
         </a>
 
         <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0 text-center">
-          <a href="#journey" class="text-gray-300 hover:text-teal-400 px-3 py-2 text-sm">My Journey</a>
+          <a href="#journey" class="text-gray-300 hover:text-teal-400 px-3 py-2 text-sm">Project Documentation</a>
           <a href="#portfolio" class="text-gray-300 hover:text-teal-400 px-3 py-2 text-sm">Projects</a>
           <a href="#contact" class="text-gray-300 hover:text-teal-400 px-3 py-2 text-sm">Contact</a>
         </div>
@@ -42,13 +38,9 @@
     </nav>
   </header>
 
-  <!-- MAIN -->
   <main>
-
-    <!-- HERO -->
     <section id="home" class="relative h-[60vh] flex items-center justify-center border-b-4 border-teal-500/50">
       <div class="absolute inset-0 bg-repeat opacity-10" style="background-image:url('data:image/svg+xml;utf8,<svg viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'><circle cx=\'50\' cy=\'50\' r=\'2\' fill=\'%23374151\'/></svg>');"></div>
-
       <div class="relative z-10 text-center p-6 bg-gray-900/70 rounded-xl max-w-xl mx-4">
         <h1 class="text-5xl font-bold mb-4 text-teal-300 tracking-tight">
           Aspiring Data Analyst
@@ -62,7 +54,6 @@
       </div>
     </section>
 
-    <!-- PROJECT DOCUMENTATION -->
     <section id="journey" class="py-16 max-w-4xl mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-12 text-teal-400">Project Documentation</h2>
 
@@ -77,7 +68,6 @@
         href="#" target="_blank">Download PDF</a>
       </div>
 
-
       <h3 class="text-2xl font-semibold text-teal-300 mt-10 mb-4">Power BI Projects</h3>
 
       <div class="p-6 bg-gray-800 rounded-xl border-l-4 border-gray-500 shadow-lg mb-6">
@@ -88,97 +78,54 @@
         <a class="inline-block px-4 py-2 bg-teal-400 text-gray-900 rounded-lg font-medium hover:bg-teal-300 transition"
         href="#" target="_blank">Download PDF</a>
       </div>
-
     </section>
 
-
-    <!-- PROJECT SIDEBAR + GRID -->
     <section id="portfolio" class="py-16 max-w-7xl mx-auto px-4 grid grid-cols-12 gap-6">
       
-      <!-- LEFT SIDEBAR -->
       <aside class="col-span-12 lg:col-span-3 space-y-4 bg-gray-800 p-6 rounded-xl h-fit sticky top-24">
-        
         <h3 class="text-xl font-semibold mb-4">Filters</h3>
 
-        <!-- SEARCH -->
         <input 
           id="searchInput"
           placeholder="Search projects..."
           class="w-full px-3 py-2 rounded bg-gray-700 border border-gray-600 text-sm"
         />
 
-        <!-- CATEGORY FILTERS -->
         <div class="space-y-2 mt-4">
           <button class="filterBtn bg-gray-700 w-full py-2 rounded" data-filter="all">All</button>
           <button class="filterBtn bg-gray-700 w-full py-2 rounded" data-filter="excel">Excel</button>
           <button class="filterBtn bg-gray-700 w-full py-2 rounded" data-filter="powerbi">Power BI</button>
-          <button class="filterBtn bg-gray-700 w-full py-2 rounded" data-filter="python">Python</button>
-          <button class="filterBtn bg-gray-700 w-full py-2 rounded" data-filter="r">R</button>
-          <button class="filterBtn bg-gray-700 w-full py-2 rounded" data-filter="tableau">Tableau</button>
         </div>
 
-        <!-- RESUME BUTTON -->
         <a
           href="#"
           class="block text-center mt-8 bg-teal-400 text-gray-900 py-2 rounded hover:bg-teal-300"
         >
           Download Resume
         </a>
-
       </aside>
 
-    <!-- PROJECTS -->
-<section id="projects" class="py-16 max-w-6xl mx-auto px-4">
+      <div class="col-span-12 lg:col-span-9 grid sm:grid-cols-2 xl:grid-cols-3 gap-6" id="projectContainer">
 
-  <!-- Heading -->
-  <h2 class="text-4xl font-bold text-center mb-4 text-teal-400">
-    Projects
-  </h2>
+        <div class="project-card bg-gray-800 rounded-xl p-4 border border-gray-700 filter-excel" data-title="grading system">
+          <img
+            class="rounded mb-3"
+            src="https://raw.githubusercontent.com/ZuhraBi/data-analyst-journey/main/Grading%20system%20Sample.png"
+          />
+          <h3 class="text-xl font-semibold text-teal-300">Excel: Grading System</h3>
+          <p class="text-gray-400 text-sm">Excel basics with grade logic.</p>
+          <a
+            download
+            href="https://raw.githubusercontent.com/ZuhraBi/data-analyst-journey/main/Grading%20System.xlsx"
+            class="inline-block mt-3 bg-yellow-400 text-gray-900 py-2 px-4 rounded text-sm"
+          >
+            Download
+          </a>
+        </div>
 
-  <!-- FILTERS -->
-  <div class="flex flex-wrap justify-center gap-3 mb-10">
-    <button class="px-4 py-2 rounded bg-gray-700 text-white filter-btn" data-filter="all">
-      All
-    </button>
-    <button class="px-4 py-2 rounded bg-gray-700 text-white filter-btn" data-filter="excel">
-      Excel
-    </button>
-    <button class="px-4 py-2 rounded bg-gray-700 text-white filter-btn" data-filter="powerbi">
-      Power BI
-    </button>
-    <button class="px-4 py-2 rounded bg-gray-700 text-white filter-btn" data-filter="tableau" disabled>
-      Tableau (coming soon)
-    </button>
-    <button class="px-4 py-2 rounded bg-gray-700 text-white filter-btn" data-filter="r" disabled>
-      R (coming soon)
-    </button>
-  </div>
+      </div>
+    </section>
 
-  <!-- PROJECT GRID -->
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="projectContainer">
-
-    <!-- EXCEL PROJECT EXAMPLE -->
-    <div class="project-card bg-gray-800 rounded-xl p-4 border border-gray-700 filter-excel" data-title="grading system">
-      <img
-        class="rounded mb-3"
-        src="https://raw.githubusercontent.com/ZuhraBi/data-analyst-journey/main/Grading%20system%20Sample.png"
-      />
-      <h3 class="text-xl font-semibold text-teal-300">Excel: Grading System</h3>
-      <p class="text-gray-400 text-sm">Excel basics with grade logic.</p>
-      <a
-        download
-        href="https://raw.githubusercontent.com/ZuhraBi/data-analyst-journey/main/Grading%20System.xlsx"
-        class="inline-block mt-3 bg-yellow-400 text-gray-900 py-2 px-4 rounded text-sm"
-      >
-        Download
-      </a>
-    </div>
-
-  </div>
-</section>
-
-
-    <!-- CONTACT -->
     <section id="contact" class="py-16 text-center max-w-xl mx-auto">
       <h2 class="text-4xl font-bold mb-4">Let's Connect</h2>
       <p class="text-gray-400 mb-8">
@@ -192,17 +139,14 @@
         (your_email@example.com)
       </p>
     </section>
-
   </main>
 
-  <!-- FOOTER -->
   <footer class="bg-gray-900 border-t border-gray-800 py-8 text-center">
     <p class="text-sm text-gray-500">
       © 2025 Zuhra’s Data Analyst Journey
     </p>
   </footer>
 
-  <!-- JS FILTER / SEARCH -->
   <script>
     const filterBtns = document.querySelectorAll(".filterBtn");
     const projects = document.querySelectorAll(".project-card");
